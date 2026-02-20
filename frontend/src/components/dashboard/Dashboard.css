@@ -1,0 +1,65 @@
+.main {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.form-section {
+    width: 100%;
+    max-width: 500px !important;
+    margin: 0 auto;
+    border: 1px solid #dee2e6;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.form-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-section input {
+    flex: 1;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+button {
+    max-width: 80px;
+}
+
+.todo-section {
+    width: 100%;
+    max-width: 500px !important;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.4rem;
+}
+
+.todo-section p {
+    margin-bottom: 0;
+    color: #000;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.todo-section button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    margin-left: 0.7rem;
+}
+
+.todo-section span {
+    font-size: 1.2rem;
+}
+
+.todo-section span:hover {
+    cursor: pointer;
+}

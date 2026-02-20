@@ -1,0 +1,28 @@
+.logout-btn {
+    background-color: transparent;
+    border-radius: 6px;
+    border: 1px solid #333333;
+    padding: 6px 12px;
+    color: #333333;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #333333;
+    color: #ffffff; 
+    border: 1px solid #333333;
+}
+
+.navbar-brand {
+    font-size: 24px !important;
+    font-weight: bold;
+    color: #4f46e5 !important;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 10px 30px !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
