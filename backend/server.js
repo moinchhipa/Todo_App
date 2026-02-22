@@ -11,7 +11,7 @@ const todoRoutes = require("./routes/todo");
 
 app.use(
   cors({
-    origin: "https://your-site.netlify.app",
+    origin: "https://doneitmoin.netlify.app/",
   }),
 );
 app.use(express.json());
