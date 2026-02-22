@@ -1,5 +1,4 @@
 import Navbar from "../navbar/Navbar";
-import Footer from "../Footer";
 import { useEffect, useState } from "react";
 import "./Dashboard.css";
 import API from "../../api/axios";
@@ -21,7 +20,7 @@ function Dashboard() {
   const fetchTodos = async () => {
     try {
       const res = await API.get("/todos");
-      console.log(res.data)
+      console.log(res.data);
       setTodos(res.data);
     } catch (e) {
       console.log(e);
@@ -38,6 +37,15 @@ function Dashboard() {
     try {
       await API.post("/todos", form);
       setForm({ title: "" });
+      fetchTodos();
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const handleDone = async (id) => {
+    try {
+      await API.put(`/todos/toggle/${id}`);
       fetchTodos();
     } catch (e) {
       console.log(e);
@@ -74,14 +82,25 @@ function Dashboard() {
 
           <div className="todo-section">
             {todos.map((todo) => (
-              <div className="row" key={todo._id}>
+              <div className="row mt-3 mb-3" key={todo._id}>
                 <div className="col-2">
-                  <span>
-                    <i className="fa-regular fa-square fs-5"></i>
+                  <span onClick={() => handleDone(todo._id)}>
+                    {todo.isDone ? (
+                      <i className="fa-solid fa-square-check text-success fs-5"></i>
+                    ) : (
+                      <i className="fa-regular fa-square fs-5"></i>
+                    )}
                   </span>
                 </div>
                 <div className="col-8">
-                  <p>{todo.title}</p>
+                  <p
+                    style={{
+                      textDecoration: todo.isDone ? "line-through" : "none",
+                      color: todo.isDone ? "grey" : "black",
+                    }}
+                  >
+                    {todo.title}
+                  </p>
                 </div>
                 <div className="col-2">
                   <button onClick={() => handleDelete(todo._id)}>
@@ -93,7 +112,6 @@ function Dashboard() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

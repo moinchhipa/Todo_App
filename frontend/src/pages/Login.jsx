@@ -63,6 +63,15 @@ function Login() {
           </div>
           <button className="w-100 btn btn-primary">Login</button>
         </form>
+        <p className="mt-3">
+          Don't have an account?{" "}
+          <span
+            style={{ color: "blue", cursor: "pointer" }}
+            onClick={() => navigate("/register")}
+          >
+            Register
+          </span>
+        </p>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 .main {
     background-color: #f8f9fa;
-    min-height: 100vh;
+    min-height: calc(100vh - 66px);
     padding: 2rem;
 }
 
@@ -36,7 +36,7 @@ button {
     max-width: 500px !important;
     margin: 0 auto;
     margin-top: 2rem;
-    padding: 1rem;
+    padding: 0 1rem;
     background-color: #fff;
     border: 1px solid #dee2e6;
     border-radius: 0.4rem;

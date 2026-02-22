@@ -4,22 +4,22 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 dotenv = require("dotenv");
 dotenv.config();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 const authRoutes = require("./routes/auth");
 const todoRoutes = require("./routes/todo");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  }),
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Rotes
 app.use("/api/auth", authRoutes);
 app.use("/api/todos", todoRoutes);
-
-app.get("/", (req, res) => {
-  res.send("Root Route");
-});
 
 //MongoDB connection
 mongoose

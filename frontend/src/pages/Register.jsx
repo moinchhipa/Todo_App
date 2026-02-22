@@ -1,7 +1,7 @@
 import { useState } from "react";
 import API from "../api/axios";
 import { useNavigate } from "react-router-dom";
-import "./Login.css"
+import "./Login.css";
 
 function Register() {
   const navigate = useNavigate();
@@ -35,49 +35,58 @@ function Register() {
     }
   };
   return (
-      <div className="container d-flex justify-content-center align-items-center vh-100">
-          <div className="col-md-4">
-            <div className="card w-100 p-4 text-center reg-card">
-              <h2 className="text-center mb-4 fs-2">Create Account</h2>
-              <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <input
-                    className="form-control"
-                    type="text"
-                    placeholder="Enter username"
-                    name="username"
-                    value={form.username}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    className="form-control"
-                    type="email"
-                    placeholder="Enter email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    className="form-control"
-                    type="password"
-                    placeholder="Enter password"
-                    name="password"
-                    value={form.password}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <button className="w-100 btn btn-primary">Register</button>
-              </form>
+    <div className="container d-flex justify-content-center align-items-center vh-100">
+      <div className="col-md-4">
+        <div className="card w-100 p-4 text-center reg-card">
+          <h2 className="text-center mb-4 fs-2">Create Account</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Enter username"
+                name="username"
+                value={form.username}
+                onChange={handleChange}
+                required
+              />
             </div>
-          </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                type="email"
+                placeholder="Enter email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                type="password"
+                placeholder="Enter password"
+                name="password"
+                value={form.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button className="w-100 btn btn-primary">SignIn</button>
+          </form>
+          <p className="mt-3">
+            Already have an account?{" "}
+            <span
+              style={{ color: "blue", cursor: "pointer" }}
+              onClick={() => navigate("/login")}
+            >
+              Login
+            </span>
+          </p>
         </div>
+      </div>
+    </div>
   );
 }
 

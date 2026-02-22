@@ -52,6 +52,25 @@ router.put("/:id", authMiddleware, async (req, res) => {
   }
 });
 
+//isDone Route
+router.put("/toggle/:id",authMiddleware, async (req, res) => {
+  try {
+    const todo = await Todo.findOne({
+      _id: req.params.id,
+      user: req.userId,
+    });
+    
+    if(!todo) {
+      return res.json({message: "Todo not found"});
+    }
+    todo.isDone = !todo.isDone;
+    await todo.save();
+    res.json(todo);
+  } catch (e) {
+    console.log(e)
+  }
+})
+
 //Delete todo
 router.delete("/:id", authMiddleware, async (req, res) => {
   try {
