@@ -101,7 +101,7 @@ function Dashboard() {
                     <p
                       style={{
                         textDecoration: todo.isDone ? "line-through" : "none",
-                        color: todo.isDone ? "white" : "black",
+                        color: todo.isDone ? "grey" : "white",
                       }}
                     >
                       {todo.title}
