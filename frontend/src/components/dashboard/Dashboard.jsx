@@ -81,34 +81,40 @@ function Dashboard() {
           </div>
 
           <div className="todo-section">
-            {todos.map((todo) => (
-              <div className="row mt-3 mb-3" key={todo._id}>
-                <div className="col-2">
-                  <span onClick={() => handleDone(todo._id)}>
-                    {todo.isDone ? (
-                      <i className="fa-solid fa-square-check text-success fs-5"></i>
-                    ) : (
-                      <i className="fa-regular fa-square fs-5"></i>
-                    )}
-                  </span>
-                </div>
-                <div className="col-8">
-                  <p
-                    style={{
-                      textDecoration: todo.isDone ? "line-through" : "none",
-                      color: todo.isDone ? "grey" : "black",
-                    }}
-                  >
-                    {todo.title}
-                  </p>
-                </div>
-                <div className="col-2">
-                  <button onClick={() => handleDelete(todo._id)}>
-                    <i className="fa-regular fa-trash-can"></i>
-                  </button>
-                </div>
+            {todos.length === 0 ? (
+              <div className="empty-state">
+                No todos yet. Add your first task
               </div>
-            ))}
+            ) : (
+              todos.map((todo) => (
+                <div className="row mt-3 mb-3" key={todo._id}>
+                  <div className="col-2">
+                    <span onClick={() => handleDone(todo._id)}>
+                      {todo.isDone ? (
+                        <i className="fa-solid fa-square-check text-success fs-5"></i>
+                      ) : (
+                        <i className="fa-regular fa-square fs-5"></i>
+                      )}
+                    </span>
+                  </div>
+                  <div className="col-8">
+                    <p
+                      style={{
+                        textDecoration: todo.isDone ? "line-through" : "none",
+                        color: todo.isDone ? "grey" : "black",
+                      }}
+                    >
+                      {todo.title}
+                    </p>
+                  </div>
+                  <div className="col-2">
+                    <button onClick={() => handleDelete(todo._id)}>
+                      <i className="fa-regular fa-trash-can"></i>
+                    </button>
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         </div>
       </div>
