@@ -38,7 +38,10 @@ function Register() {
     <div className="container d-flex justify-content-center align-items-center vh-100">
       <div className="col-md-4">
         <div className="card w-100 p-4 text-center reg-card">
-          <h2 className="text-center mb-4 fs-2">Create Account</h2>
+          <h2 className="mb-4 fs-2">
+            <i className="fa-solid fa-circle-check me-2 text-primary"></i>
+            Create Account
+          </h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <input
@@ -73,7 +76,7 @@ function Register() {
                 required
               />
             </div>
-            <button className="w-100 btn btn-primary">SignIn</button>
+            <button className="w-100 btn btn-primary">Register</button>
           </form>
           <p className="mt-3">
             Already have an account?{" "}

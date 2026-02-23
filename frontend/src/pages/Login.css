@@ -1,15 +1,90 @@
-.log-card {
-    max-width: 400px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* ===== Page Background ===== */
+body {
+  background: #0f172a;
 }
 
+/* Center container spacing */
+.container {
+  padding: 20px;
+}
+
+/* ===== Shared Card Style ===== */
+.log-card,
 .reg-card {
-    max-width: 400px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  background: #1e293b;
+  border-radius: 14px;
+  padding: 2rem;
+  border: 1px solid #334155;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  color: #e2e8f0;
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
+.log-card:hover,
+.reg-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Heading */
+.log-card h2,
+.reg-card h2 {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+/* ===== Inputs ===== */
+.log-card .form-control,
+.reg-card .form-control {
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: 0.2s ease;
+}
+
+.log-card .form-control::placeholder,
+.reg-card .form-control::placeholder {
+  color: #94a3b8;
+}
+
+.log-card .form-control:focus,
+.reg-card .form-control:focus {
+  background: #0f172a;
+  color: #e2e8f0;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* ===== Buttons ===== */
+.log-card .btn-primary,
+.reg-card .btn-primary {
+  background: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.log-card .btn-primary:hover,
+.reg-card .btn-primary:hover {
+  background: #2563eb;
+  transform: scale(1.02);
+}
+
+/* ===== Links ===== */
+.log-card span,
+.reg-card span {
+  color: #3b82f6 !important;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.log-card span:hover,
+.reg-card span:hover {
+  text-decoration: underline;
+  color: #60a5fa !important;
 }

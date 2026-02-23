@@ -37,7 +37,10 @@ function Login() {
   return (
     <div className="container d-flex justify-content-center align-items-center vh-100">
       <div className="card w-100 p-4 text-center log-card">
-        <h2 className="mb-3">Login</h2>
+        <h2 className="mb-3">
+          <i className="fa-solid fa-circle-check me-2 text-primary"></i>
+          DoneIt Login
+        </h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <input
