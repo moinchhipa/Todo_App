@@ -21,6 +21,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/auth", authRoutes);
 app.use("/api/todos", todoRoutes);
 
+app.get("/", (req, res) => {
+  res.send("server is running");
+});
+
 //MongoDB connection
 mongoose
   .connect(process.env.MONGO_URL)
