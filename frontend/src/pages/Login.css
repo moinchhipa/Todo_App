@@ -1,23 +1,23 @@
 /* ===== Page Background ===== */
 body {
-  background: #0f172a;
+  background: #f1f5f9;
+  font-family: "Segoe UI", sans-serif;
 }
 
-/* Center container spacing */
+/* Center spacing */
 .container {
   padding: 20px;
 }
 
-/* ===== Shared Card Style ===== */
+/* ===== Card Style (Login + Register) ===== */
 .log-card,
 .reg-card {
   max-width: 420px;
-  background: #1e293b;
+  background: #ffffff;
   border-radius: 14px;
   padding: 2rem;
-  border: 1px solid #334155;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-  color: #e2e8f0;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
 }
 
@@ -30,42 +30,43 @@ body {
 /* Heading */
 .log-card h2,
 .reg-card h2 {
-  color: #e2e8f0;
+  color: #1e293b;
   font-weight: 600;
 }
 
-/* ===== Inputs ===== */
+/* ===== Inputs (Light Theme) ===== */
 .log-card .form-control,
 .reg-card .form-control {
-  background: #0f172a;
-  border: 1px solid #334155;
-  color: #e2e8f0;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
   border-radius: 8px;
-  padding: 10px 12px;
+  padding: 12px;
+  font-size: 15px;
   transition: 0.2s ease;
 }
 
 .log-card .form-control::placeholder,
 .reg-card .form-control::placeholder {
-  color: #94a3b8;
+  color: #64748b;
 }
 
 .log-card .form-control:focus,
 .reg-card .form-control:focus {
-  background: #0f172a;
-  color: #e2e8f0;
+  background: #ffffff;
   border-color: #3b82f6;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
-/* ===== Buttons ===== */
+/* ===== Button ===== */
 .log-card .btn-primary,
 .reg-card .btn-primary {
   background: #3b82f6;
   border: none;
   border-radius: 8px;
-  padding: 10px;
+  padding: 12px;
   font-weight: 500;
+  font-size: 16px;
   transition: 0.2s ease;
 }
 
@@ -80,11 +81,11 @@ body {
 .reg-card span {
   color: #3b82f6 !important;
   font-weight: 500;
-  transition: 0.2s;
+  cursor: pointer;
 }
 
 .log-card span:hover,
 .reg-card span:hover {
   text-decoration: underline;
-  color: #60a5fa !important;
+  color: #2563eb !important;
 }
