@@ -1,0 +1,32 @@
+/* ===== Dark Footer ===== */
+.footer {
+  background: #020617;
+  border-top: 1px solid #1e293b;
+  padding: 14px 0;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+/* Heart Icon */
+.footer i {
+  color: #ef4444;
+  margin: 0 4px;
+  animation: heartbeat 1.5s infinite;
+}
+
+/* Name Highlight */
+.footer span {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+/* Heart Animation */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  40% { transform: scale(1); }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}

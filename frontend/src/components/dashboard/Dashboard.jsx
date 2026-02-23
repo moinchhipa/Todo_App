@@ -2,6 +2,7 @@ import Navbar from "../navbar/Navbar";
 import { useEffect, useState } from "react";
 import "./Dashboard.css";
 import API from "../../api/axios";
+import Footer from "../footer/Footer";
 
 function Dashboard() {
   const [form, setForm] = useState({
@@ -118,6 +119,7 @@ function Dashboard() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
