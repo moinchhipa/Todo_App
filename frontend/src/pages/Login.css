@@ -1,6 +1,6 @@
 /* ===== Page Background ===== */
 body {
-  background: #f1f5f9;
+  background: #0f172a;
   font-family: "Segoe UI", sans-serif;
 }
 
@@ -9,53 +9,57 @@ body {
   padding: 20px;
 }
 
-/* ===== Card Style (Login + Register) ===== */
+/* ===== Auth Card (Login + Register) ===== */
 .log-card,
 .reg-card {
   max-width: 420px;
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 2rem;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 2.2rem;
+  border: 1px solid #334155;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  color: #e2e8f0;
   transition: 0.3s ease;
 }
 
-/* Hover effect */
+/* Hover lift */
 .log-card:hover,
 .reg-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 /* Heading */
 .log-card h2,
 .reg-card h2 {
-  color: #1e293b;
+  color: #e2e8f0;
   font-weight: 600;
 }
 
-/* ===== Inputs (Light Theme) ===== */
+/* ===== Inputs ===== */
 .log-card .form-control,
 .reg-card .form-control {
-  background: #f8fafc;
-  border: 1px solid #cbd5e1;
-  color: #0f172a;
-  border-radius: 8px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  border-radius: 10px;
   padding: 12px;
   font-size: 15px;
-  transition: 0.2s ease;
+  transition: all 0.2s ease;
 }
 
+/* Placeholder */
 .log-card .form-control::placeholder,
 .reg-card .form-control::placeholder {
-  color: #64748b;
+  color: #94a3b8;
 }
 
+/* Focus */
 .log-card .form-control:focus,
 .reg-card .form-control:focus {
-  background: #ffffff;
+  background: #0f172a;
+  color: #e2e8f0;
   border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
 }
 
 /* ===== Button ===== */
@@ -63,11 +67,11 @@ body {
 .reg-card .btn-primary {
   background: #3b82f6;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 12px;
-  font-weight: 500;
   font-size: 16px;
-  transition: 0.2s ease;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .log-card .btn-primary:hover,
@@ -87,5 +91,5 @@ body {
 .log-card span:hover,
 .reg-card span:hover {
   text-decoration: underline;
-  color: #2563eb !important;
+  color: #60a5fa !important;
 }
