@@ -93,7 +93,7 @@ function Dashboard() {
                       {todo.isDone ? (
                         <i className="fa-solid fa-square-check text-success fs-5"></i>
                       ) : (
-                        <i className="fa-regular fa-square fs-5"></i>
+                        <i style={{color: "white"}} className="fa-regular fa-square fs-5"></i>
                       )}
                     </span>
                   </div>
@@ -101,7 +101,7 @@ function Dashboard() {
                     <p
                       style={{
                         textDecoration: todo.isDone ? "line-through" : "none",
-                        color: todo.isDone ? "grey" : "black",
+                        color: todo.isDone ? "white" : "black",
                       }}
                     >
                       {todo.title}
