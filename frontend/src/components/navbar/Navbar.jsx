@@ -10,9 +10,9 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <span className="navbar-brand">
           <i className="fa-solid fa-circle-check"></i> DoneIt
-        </a>
+        </span>
         <button className="logout-btn" onClick={() => handleLogout()}>
           Logout
         </button>

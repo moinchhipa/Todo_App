@@ -1,28 +1,47 @@
-.logout-btn {
-    background-color: transparent;
-    border-radius: 6px;
-    border: 1px solid #333333;
-    padding: 6px 12px;
-    color: #333333;
-    font-size: 14px;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
-.logout-btn:hover {
-    background-color: #333333;
-    color: #ffffff; 
-    border: 1px solid #333333;
-}
-
-.navbar-brand {
-    font-size: 24px !important;
-    font-weight: bold;
-    color: #4f46e5 !important;
-}
-
+/* ===== Dark Navbar ===== */
 .navbar {
-    background-color: #fff;
-    padding: 10px 30px !important;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #020617; /* deep dark */
+  padding: 12px 30px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #1e293b;
 }
 
+/* Brand */
+.navbar-brand {
+  font-size: 22px !important;
+  font-weight: 600;
+  color: #e2e8f0 !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Brand Icon */
+.navbar-brand i {
+  color: #3b82f6;
+  font-size: 1.3rem;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: transparent;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  padding: 6px 14px;
+  color: #e2e8f0;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+.logout-btn:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+/* Active Click Effect */
+.logout-btn:active {
+  transform: scale(0.97);
+}
